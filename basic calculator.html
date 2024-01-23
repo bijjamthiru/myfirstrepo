@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Basic Calculator </title>
+<meta charset="UTF-8">
+<style type="text/css">
+body
+{
+background-color:bisque;
+}
+table,tr,td
+{
+border-collapse:collapse;
+border-style:none;
+}
+.dl
+{
+background-color:Green;
+width:200px;
+height:100px;
+margin-left:500px;
+margin-top:250px;
+color:yellow;
+box-shadow: 4px 4px 4px #000000;
+padding:20px 20px 20px 20px;
+}
+</style>
+</head>
+<body>
+<form name="fml">
+<div class="dl">
+<table>
+<tr>
+<td><label for="a val">A</label><input type="number" id="v1" name="a val" placeholder="A Value" required autofocus></td>
+</tr>
+<tr>
+<td><label for="b val">B</label><input type="number" id="v2" name="b val" placeholder="B Value" required autofocus></td>
+</tr>
+<tr>
+<td><label for="c val">C</label><input type="number" id="v3" name="c val" placeholder="C Value" required autofocus></td>
+</tr>
+<tr>
+<td>
+<input type="button" value="+" onclick="mysum()">
+<input type="button" value="-" onclick="mysub()">
+<input type="button" value="/" onclick="mydiv()">
+<input type="button" value="*" onclick="mymul()">
+<input type="button" value="%" onclick="mymod()">
+<input type="button" value="<-" onclick="myreset()">
+</td>
+</tr>
+</table>
+</div>
+</form>
+<script type="text/javascript">
+function mysum()
+{
+a=parseInt(document.getElementById("v1").value);
+b=parseInt(document.getElementById("v2").value);
+c=a+b;
+document.getElementById("v3").value=c;
+}
+function mysub()
+{
+a=parseInt(document.getElementById("v1").value);
+b=parseInt(document.getElementById("v2").value);
+c=a-b;
+document.getElementById("v3").value=c;
+}
+function mymul()
+{
+a=parseInt(document.getElementById("v1").value);
+b=parseInt(document.getElementById("v2").value);
+c=a*b;
+document.getElementById("v3").value=c;
+}
+function mymod()
+{
+a=parseInt(document.getElementById("v1").value);
+b=parseInt(document.getElementById("v2").value);
+c=a%b;
+document.getElementById("v3").value=c;
+}
+function mydiv()
+{
+a=parseInt(document.getElementById("v1").value);
+b=parseInt(document.getElementById("v2").value);
+c=a/b;
+document.getElementById("v3").value=c;
+}
+function myreset()
+{
+document.getElementById("v1").value="";
+document.getElementById("v2").value="";
+document.getElementById("v3").value="";
+}
+</script>
+</body>
+</html>
+
